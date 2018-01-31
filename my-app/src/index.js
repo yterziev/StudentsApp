@@ -1,9 +1,30 @@
-import React from 'react';
-import { render } from 'react-dom';
-import { createStore } from 'redux';
-import { Provider } from 'react-redux';
-import tasks from './reducers';
-import App from './components/App';
+// import React from 'react';
+// import { render } from 'react-dom';
+// import { createStore } from 'redux';
+// import { Provider } from 'react-redux';
+// import tasks from './reducers';
+// import App from './components/App';
+// import initialData from '../data';
+
+// const store = createStore(
+//     tasks, // reducers
+//     initialData // optional, just sample tasks
+// );
+
+// render(
+//     <Provider store={store}>
+//         <App />
+//     </Provider>,
+//     document.getElementById('app')
+// );
+
+
+import React from 'react'
+import { render } from 'react-dom'
+import { createStore } from 'redux'
+import tasks from './reducers'
+import Root from './routes'
+
 import initialData from '../data';
 
 const store = createStore(
@@ -12,8 +33,6 @@ const store = createStore(
 );
 
 render(
-    <Provider store={store}>
-        <App />
-    </Provider>,
-    document.getElementById('app')
-);
+  <Root store={store} />,
+  document.getElementById('app')
+)

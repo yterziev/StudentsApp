@@ -20,6 +20,7 @@ module.exports = {
         ]
     },
     devServer: {
-        contentBase: './docs'
+        contentBase: './docs',
+        historyApiFallback: true
     }
 };
