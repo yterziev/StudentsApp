@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 
+
 const Home = ({ cardsCount }) => (
     <div className="project-info">
         <h1>Trololo Board</h1>

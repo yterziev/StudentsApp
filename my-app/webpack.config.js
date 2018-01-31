@@ -20,7 +20,9 @@ module.exports = {
         ]
     },
     devServer: {
-        contentBase: './docs',
-        historyApiFallback: true
+        contentBase: path.join(__dirname, "docs"),
+        compress: true,
+        historyApiFallback: true,
+        hot: true
     }
 };
